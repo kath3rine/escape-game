@@ -1,7 +1,7 @@
  function swapImage(){
   if (document.getElementById("pic").src.endsWith('example.png') == true)  { 
-       document.getElementById("pic").src = "assets/example2.png"; //assignment  
-   } else if (document.getElementById("pic").src.endsWith('example.png') == true) { 
+       document.getElementById("pic").src = "assets/example3.png"; //assignment  
+   } else if (document.getElementById("pic").src.endsWith('example3.png') == true) { 
       document.getElementById("pic").src = "assets/example.png"; 
   }
 } 
