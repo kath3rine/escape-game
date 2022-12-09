@@ -1,22 +1,22 @@
 <!doctype html>
 <html>
   <head>
+    <title>Escape the Haunted House </title>
      <script src=
       "//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
     </script> 
+    <link rel="stylesheet" href="style.css" />
     <!-- <script
       src="https://cdn.jsdelivr.net/npm/p5@vv1.4.0/lib/p5.js"
       type="text/javascript">
     </script> -->
   </head>
 
-  <body>
-    <h1 id="prompt"> do you want to die?</h1>
-    <p id="output"> output here </p>
-    <button type="button" id="b1">Yes</button>
-    <button type="button" id="b2">No</button>
+  <body id="frontpage">
+    <img src = "assets/title.png" class="scene" id = "title"/>
     <br>
-    <img src = "assets/example.png" id = "img"/>
-    <script src="sketch.js" type="text/javascript"></script>
+    <button id="startbutton" onclick="window.location.href='level1.html';">
+      Start the Game!
+    </button>
   </body>
 </html>
