@@ -4,6 +4,7 @@
     --lt-purple: #907f9f;
     --lightest-purple: #dfd8e6;
     --grey: #a4a5ae;
+    --lt-grey: #d1d3df;
     --dk-mint: #b0c7bd;
     --mint: #b8ebd0;
 
@@ -57,7 +58,7 @@ button:hover {
     font-size: 24px;
     position: absolute;
     top: 500px;
-    left: 450px;
+    left: 400px;
 }
 
 #startbutton {
@@ -65,7 +66,7 @@ button:hover {
 }
 
 #deathbutton {
-    background-color: rgb(218, 218, 218);
+    background-color: var(--lt-grey);
 }
 
 .display img {

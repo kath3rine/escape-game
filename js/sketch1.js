@@ -13,14 +13,14 @@ function b1clicked() {
     ctn.onclick = function() {
         ctn.innerHTML = 'Continue'
         showAll()
-        prompt.innerHTML = 'You wake up in a haunted house and your goal is to escape. First, you need to find the key to leave the guest bedroom. What do you want to do?'
+        prompt.innerHTML = 'You wake up in a haunted house and your goal is to escape. What do you want to do?'
     }
 }
 
 /* OPTION 2: move the blanket */
 function b2clicked() {
     hideAll();
-    scene1.src = 'level1/guestdrawer.png';
+    scene1.src = 'assets/guestdrawer.png';
     ctn.innerHTML = 'Look inside';
     prompt.innerHTML = 'There is a dresser under there!';
 }
@@ -29,7 +29,7 @@ function b2clicked() {
 function b3clicked() {
     hideAll();
     prompt.innerHTML = 'Uh oh, there is a ghost under the bed';
-    scene1.src = 'level1/guestdrawer.png'; /* replace w/ ghost under bed */
+    scene1.src = 'assets/guestdrawer.png'; /* replace w/ ghost under bed */
     ctn.onclick = function() {
         window.location.href = 'death.html'
     };
