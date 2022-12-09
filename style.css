@@ -7,7 +7,7 @@
     --dk-mint: #b0c7bd;
     --mint: #b8ebd0;
 
-    --pad: 0.75rem;
+    --pad: 1rem;
   }
 
 * {
@@ -16,7 +16,7 @@
 
 * img {
     height: 550px;
-    padding: var(--pad);
+    margin-left: var(--pad);
 }
 
 .top {
@@ -31,7 +31,7 @@
 button {
     text-align: center;
     font-size: 18px;
-    margin: var(--pad);
+    margin: 0.4rem;
 }
 
 button:hover {
@@ -42,27 +42,33 @@ button:hover {
     background-color: white;
 }
 
-.move {
+.ctn {
     left: 700px;
     position: absolute;
+    visibility: hidden;
 }
 
-/* frontpage */
+/* front and end pages */
 #frontpage {
     background-color: var(--mint);
-    align-content: center;
-    align-items: center;
+}
+
+.mainbutton {
+    font-size: 24px;
+    position: absolute;
+    top: 500px;
+    left: 450px;
 }
 
 #startbutton {
     background-color: #b8ebd0;
-    font-size: 24px;
-    position: absolute;
-    top: 500px;
-    left: 390px;
 }
 
-#frontpage img {
+#deathbutton {
+    background-color: rgb(218, 218, 218);
+}
+
+.display img {
     height: 650px;
 }
 
@@ -77,6 +83,6 @@ button:hover {
     background-color: var(--lightest-purple);
 }
 
-#move1 {
+#ctn1 {
     background-color: var(--lt-purple);
 }

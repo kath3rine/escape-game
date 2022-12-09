@@ -1,26 +1,25 @@
 <!doctype html>
 <html>
   <head>
-    <title>Escape the Haunted House: Level 1 </title>
-     <script src=
-      "//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
-    </script> 
+    <title>Level 1: Guest Bedroom </title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/p5@vv1.4.0/lib/p5.js"
-      type="text/javascript">
-    </script> -->
   </head>
 
   <body id="level1">
     <div class="top"> 
-      <h3 id="prompt"> You wake up in a haunted house and your goal is to escape...what do you want to do?</h3>
-      <button type="button" class="option" id="b1">Open the door</button>
-      <button type="button" class="option" id="b2">Move the blanket</button>
-      <button type="button" class="option" id="b3">Look under the bed</button>
-      <button type="button" class="move" id="move1">Continue</button>
+      <h3 id="prompt"> You wake up in a haunted house and your goal is to escape. First, you need to find the key to leave the guest bedroom. What do you want to do?</h3>
+      
+      <button type="button" class="option" id="b1" onclick = "b1clicked()">Open the door</button>
+      
+      <button type="button" class="option" id="b2" onclick = "b2clicked()">Move the blanket</button>
+      
+      <button type="button" class="option" id="b3" onclick="b3clicked()" >Look under the bed</button>
+      
+      <button type="button" class="ctn" id="ctn1" >Continue</button>
     </div>
+
     <img src = "level1/guestroom.png" id = "scene1"/>
-    <script src="sketch.js" type="text/javascript"></script>
+
+    <script src="sketch1.js" type="text/javascript"></script>
   </body>
 </html>
