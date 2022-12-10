@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 :root {
-    --purple: #8d5897;
-    --lt-purple: #907f9f;
+    --purple: #895d99;
+    --lt-purple: #937f9f;
     --lightest-purple: #dfd8e6;
     --grey: #a4a5ae;
     --lt-grey: #d1d3df;
@@ -40,13 +40,14 @@ button:hover {
 }
 
 .option {
-    background-color: white;
+    background-color: var(--lightest-purple);
 }
 
 .ctn {
     left: 700px;
     position: absolute;
     visibility: hidden;
+    background-color: var(--lt-purple);
 }
 
 /* front and end pages */
@@ -58,7 +59,7 @@ button:hover {
     font-size: 24px;
     position: absolute;
     top: 500px;
-    left: 400px;
+    left: 425px;
 }
 
 #startbutton {
@@ -73,17 +74,17 @@ button:hover {
     height: 650px;
 }
 
-/* level 1: guest bedroom */
-#level1 {
-    background-color:#907f9f;
+/* levels */
+#level1, #level3 {
+    background-color:var(--purple);
     margin: auto;
     display: block;
+    justify-items: center;
 }
 
-#level1 .option {
-    background-color: var(--lightest-purple);
-}
-
-#ctn1 {
+#level2 {
     background-color: var(--lt-purple);
+    margin: auto;
+    display: block;
+    justify-items: center;
 }

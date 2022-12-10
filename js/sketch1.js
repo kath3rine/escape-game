@@ -21,15 +21,23 @@ function b1clicked() {
 function b2clicked() {
     hideAll();
     scene1.src = 'assets/guestdrawer.png';
-    ctn.innerHTML = 'Look inside';
     prompt.innerHTML = 'There is a dresser under there!';
+    ctn.innerHTML = 'Look inside';
+    ctn.onclick = function() {
+        scene1.src = 'assets/keyindrawer.png'
+        prompt.innerHTML = 'Congrats, you found the key!'
+        ctn.innerHTML = 'Continue'
+        ctn.onclick = function() {
+            window.location.href = 'level2.html'
+        }
+    }
 }
 
 /* OPTION 3: look under bed */
 function b3clicked() {
     hideAll();
     prompt.innerHTML = 'Uh oh, there is a ghost under the bed';
-    scene1.src = 'assets/guestdrawer.png'; /* replace w/ ghost under bed */
+    scene1.src = 'assets/ghostunderbed.png'; 
     ctn.onclick = function() {
         window.location.href = 'death.html'
     };
