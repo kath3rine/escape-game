@@ -1,4 +1,4 @@
-const scene1 = document.getElementById("scene1");
+const scene = document.getElementById("scene2");
 const prompt = document.getElementById("prompt");
 const b1 = document.getElementById("b1");
 const b2 = document.getElementById("b2");
@@ -9,7 +9,7 @@ const ctn = document.getElementById("ctn2");
 function b1clicked() {
     hideAll();
     prompt.innerHTML = 'Uh oh, there is a ghost behind the door';
-    scene2.src = 'assets/door1.png'; 
+    scene.src = 'assets/door1.png'; 
     ctn.onclick = function() {
         window.location.href = 'death.html'
     };
@@ -19,7 +19,7 @@ function b1clicked() {
 function b2clicked() {
     hideAll();
     prompt.innerHTML = 'Uh oh, there is a ghost behind the door';
-    scene2.src = 'assets/door2.png'; 
+    scene.src = 'assets/door2.png'; 
     ctn.onclick = function() {
         window.location.href = 'death.html'
     };
@@ -29,7 +29,7 @@ function b2clicked() {
 function b3clicked() {
     hideAll();
     prompt.innerHTML = 'Yay, you picked the correct door';
-    scene2.src = 'assets/door3.png'; 
+    scene.src = 'assets/door3.png'; 
     ctn.onclick = function() {
         window.location.href = 'level3.html'
     };

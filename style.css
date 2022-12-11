@@ -7,8 +7,6 @@
     --lt-grey: #d1d3df;
     --dk-mint: #b0c7bd;
     --mint: #b8ebd0;
-
-    --pad: 1rem;
   }
 
 * {
@@ -17,15 +15,16 @@
 
 * img {
     height: 550px;
-    margin-left: var(--pad);
+    margin-left: 1rem;
 }
 
 .top {
     background-color: white;
     border: 10px solid white;
-    margin: var(--pad);
+    margin: 1rem;
+    padding: 1rem;
     left: 10px;
-    width: 810px;
+    width: 775px;
 }
 
 /* buttons */
@@ -44,7 +43,7 @@ button:hover {
 }
 
 .ctn {
-    left: 700px;
+    right: 500px;
     position: absolute;
     visibility: hidden;
     background-color: var(--lt-purple);
@@ -59,15 +58,16 @@ button:hover {
     font-size: 24px;
     position: absolute;
     top: 500px;
-    left: 425px;
 }
 
 #startbutton {
     background-color: #b8ebd0;
+    left: 420px;
 }
 
 #deathbutton {
     background-color: var(--lt-grey);
+    left: 450px;
 }
 
 .display img {

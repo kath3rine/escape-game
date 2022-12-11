@@ -1,4 +1,4 @@
-const scene1 = document.getElementById("scene1");
+const scene = document.getElementById("scene1");
 const prompt = document.getElementById("prompt");
 const b1 = document.getElementById("b1");
 const b2 = document.getElementById("b2");
@@ -20,11 +20,11 @@ function b1clicked() {
 /* OPTION 2: move the blanket */
 function b2clicked() {
     hideAll();
-    scene1.src = 'assets/guestdrawer.png';
+    scene.src = 'assets/guestdrawer.png';
     prompt.innerHTML = 'There is a dresser under there!';
     ctn.innerHTML = 'Look inside';
     ctn.onclick = function() {
-        scene1.src = 'assets/keyindrawer.png'
+        scene.src = 'assets/keyindrawer.png'
         prompt.innerHTML = 'Congrats, you found the key!'
         ctn.innerHTML = 'Continue'
         ctn.onclick = function() {
@@ -37,7 +37,7 @@ function b2clicked() {
 function b3clicked() {
     hideAll();
     prompt.innerHTML = 'Uh oh, there is a ghost under the bed';
-    scene1.src = 'assets/ghostunderbed.png'; 
+    scene.src = 'assets/ghostunderbed.png'; 
     ctn.onclick = function() {
         window.location.href = 'death.html'
     };
