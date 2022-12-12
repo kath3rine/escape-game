@@ -8,16 +8,18 @@ const ctn = document.getElementById("ctn3");
 /* OPTION 1: bathroom door */
 function b1clicked() {
     hideAll();
-    ctn.innerHTML = 'Go Back'
     prompt.innerHTML = 'You cannot open the door because you do not have the key';
-    ctn.onclick = function() { restart() };
+    // go back
+    ctn.innerHTML = 'Go Back'
+    ctn.onclick = function() { restart3() };
 }
 
 /* OPTION 2: desk */
 function b2clicked() {
     hideAll();
     prompt.innerHTML = 'A ghost has left a message for you...';
-    ctn.innerHTML = 'Check behind the painting';
+    // look behind painting
+    ctn.innerHTML = 'Look behind <br> the painting';
     scene.src = 'assets/checkpainting.png'; 
     ctn.onclick = function() {
         scene.src = 'assets/paintingkey.png'
@@ -26,7 +28,7 @@ function b2clicked() {
         ctn.onclick = function() {
             prompt.innerHTML = 'Oh no, the key you found was fake...'
             ctn.innerHTML = 'Go back'
-            ctn.onclick = function() { restart()};
+            ctn.onclick = function() { restart3()};
         }
     };
 }
@@ -35,7 +37,8 @@ function b2clicked() {
 function b3clicked() {
     hideAll();
     prompt.innerHTML = 'You found a key!';
-    ctn.innerHTML = 'Open the door'
+    // open door
+    ctn.innerHTML = 'Open door'
     scene.src = 'assets/pillowkey.png'; 
     ctn.onclick = function() {
         window.location.href = "level4.html"
@@ -43,7 +46,7 @@ function b3clicked() {
 }
 
 /* restart */
-function restart() {
+function restart3() {
     prompt.innerHTML = 'You have reached the master bedroom. Where do you want to look?'
     b1.style.visibility = 'visible';
     b2.style.visibility = 'visible';

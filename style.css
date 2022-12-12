@@ -3,7 +3,7 @@
     --purple: #895d99;
     --lt-purple: #937f9f;
     --lightest-purple: #dfd8e6;
-    --grey: #a4a5ae;
+    --grey: #808189;
     --lt-grey: #d1d3df;
     --dk-mint: #b0c7bd;
     --mint: #b8ebd0;
@@ -21,10 +21,10 @@
 .top {
     background-color: white;
     border: 10px solid white;
+    padding: 1rem 2rem 1rem 2rem;
     margin: 1rem;
-    padding: 1rem;
     left: 10px;
-    width: 775px;
+    width: 745px;
 }
 
 /* buttons */
@@ -43,15 +43,24 @@ button:hover {
 }
 
 .ctn {
-    right: 500px;
+    left: 700px;
     position: absolute;
     visibility: hidden;
     background-color: var(--lt-purple);
+    justify-self: end;
 }
 
 /* front and end pages */
 #frontpage {
     background-color: var(--mint);
+}
+
+#death {
+    background-color: var(--grey);
+}
+
+#escape {
+    background-color: var(--dk-mint);
 }
 
 .mainbutton {
@@ -70,6 +79,11 @@ button:hover {
     left: 450px;
 }
 
+#escapebutton {
+    background-color: var(--mint);
+    left: 450px;
+}
+
 .display img {
     height: 650px;
 }
@@ -82,7 +96,7 @@ button:hover {
     justify-items: center;
 }
 
-#level2 {
+#level2, #level4 {
     background-color: var(--lt-purple);
     margin: auto;
     display: block;
