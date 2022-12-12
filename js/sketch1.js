@@ -4,16 +4,20 @@ const b1 = document.getElementById("b1");
 const b2 = document.getElementById("b2");
 const b3 = document.getElementById("b3");
 const ctn = document.getElementById("ctn1");
+var hasKey = false;
 
 /* OPTION 1: open the door */
 function b1clicked() {
     hideAll();
-    ctn.innerHTML = 'Go Back'
-    prompt.innerHTML = 'You cannot open the door because you do not have the key';
-    ctn.onclick = function() {
-        ctn.innerHTML = 'Continue'
-        showAll()
-        prompt.innerHTML = 'You wake up in a haunted house and your goal is to escape. What do you want to do?'
+    if (hasKey == false) { // no key -> go back
+        ctn.innerHTML = 'Go Back'
+        prompt.innerHTML = 'You cannot open the door because you do not have the key';
+        ctn.onclick = function() { restart1()}
+    } else { // key -> level 2
+        prompt.innerHTML = 'Congrats, you can now open the door';
+        ctn.onclick = function() { 
+            window.location.href = 'level2.html'
+        }
     }
 }
 
@@ -26,10 +30,9 @@ function b2clicked() {
     ctn.onclick = function() {
         scene.src = 'assets/keyindrawer.png'
         prompt.innerHTML = 'Congrats, you found the key!'
+        hasKey = true;
         ctn.innerHTML = 'Continue'
-        ctn.onclick = function() {
-            window.location.href = 'level2.html'
-        }
+        ctn.onclick = function() { restart1() }
     }
 }
 
@@ -41,6 +44,13 @@ function b3clicked() {
     ctn.onclick = function() {
         window.location.href = 'death.html'
     };
+}
+
+function restart1() {
+    ctn.innerHTML = 'Continue'
+    showAll()
+    prompt.innerHTML = 'You wake up in a haunted house and your goal is to escape. What do you want to do?'
+    scene.src = 'assets/guestroom.png'
 }
 
 /* functions for changing visibility */

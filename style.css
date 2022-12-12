@@ -25,6 +25,7 @@
     margin: 1rem;
     left: 10px;
     width: 745px;
+    height: 90px;
 }
 
 /* buttons */
@@ -38,13 +39,17 @@ button:hover {
     color: white;
 }
 
+
 .option {
     background-color: var(--lightest-purple);
+
+    top: 90px;
 }
 
 .ctn {
     left: 700px;
     position: absolute;
+    top: 100px;
     visibility: hidden;
     background-color: var(--lt-purple);
     justify-self: end;
@@ -101,4 +106,26 @@ button:hover {
     margin: auto;
     display: block;
     justify-items: center;
+}
+
+/* door buttons */
+.door-button {
+    height: 280px;
+    width: 160px;
+    position: absolute;
+    top: 300px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#db1 {
+    left: 170px;
+}
+
+#db2 {
+    left: 340px;
+}
+
+#db3 {
+    left: 510px;
 }

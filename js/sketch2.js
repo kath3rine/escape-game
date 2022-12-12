@@ -6,33 +6,34 @@ const b3 = document.getElementById("b3");
 const ctn = document.getElementById("ctn2");
 
 /* OPTION 1: death */
-function b1clicked() {
-    hideAll();
+
+function db1clicked() {
     prompt.innerHTML = 'Uh oh, there is a ghost behind the door';
-    scene.src = 'assets/door1.png'; 
-    // death
+    prompt.style.height = '500px';
+    scene.src = 'assets/door1.png'
+    ctn.style.visibility = 'visible'
     ctn.onclick = function() {
         window.location.href = 'death.html'
-    };
+    }
 }
 
 /* OPTION 2: death */
-function b2clicked() {
-    hideAll();
+function db2clicked() {
     prompt.innerHTML = 'Uh oh, there is a ghost behind the door';
-    scene.src = 'assets/door2.png';
-    // death 
+    scene.src = 'assets/door2.png'
+    ctn.style.visibility = 'visible'
     ctn.onclick = function() {
         window.location.href = 'death.html'
-    };
+    }
 }
 
+
+
 /* OPTION 3: level 3 */
-function b3clicked() {
-    hideAll();
+function db3clicked() {
     prompt.innerHTML = 'Yay, you picked the correct door';
     scene.src = 'assets/door3.png'; 
-    // level 3
+    ctn.style.visibility = 'visible'
     ctn.onclick = function() {
         window.location.href = 'level3.html'
     };
