@@ -9,9 +9,23 @@ var canOpenWindow = false;
 /* OPTION 1: open window */
 function b1clicked() {
     if (canOpenWindow == false) {
-        cantOpen();
+        hideAll();
+        prompt.innerHTML = 'You cannot open the window because it is too icy';
+        scene.src = 'assets/windowice.png';
+        ctn.style.left = '700px';
+        ctn.innerHTML = 'Go back';
+        ctn.onclick = function() {
+            window.location.href = 'level4.html'
+        }
     } else {
-        canOpen();
+        scene.src = 'assets/window.png';
+        prompt.innerHTML = 'Congrats, you found the exit!';
+        hideAll();
+        ctn.style.left = '700px'
+        ctn.innerHTML = 'Continue';
+        ctn.onclick = function() {
+            window.location.href = 'escape.html';
+        }
     }
 }
 
@@ -29,7 +43,12 @@ function b2clicked() {
         prompt.innerHTML = ''
         ctn.onclick = function() {
             // back to home screen
-            scene.src = 'assets/showeronice.png'
+            if (canOpenWindow) {
+                scene.src = 'assets/showeron.png'
+            } else {
+                scene.src = 'assets/showeronice.png'
+            }
+            
             restart4()
             b1.onclick = function() { b1clicked()}
         }
@@ -56,36 +75,18 @@ function b3clicked() {
     hideAll();
     scene.src = 'assets/hairdryer.png';
     prompt.innerHTML = 'There is a hairdryer in there!';
+    // turn on hairdryer
     ctn.innerHTML = 'Turn on';
     ctn.onclick = function() {
+        canOpenWindow = true;
         scene.src = 'assets/hairdryeron.png'
-        prompt.innerHTML = 'Open the window!'
+        prompt.innerHTML = ''
         ctn.innerHTML = 'Continue'
-        ctn.onclick = function() { windowScene()}
-    }
-}
-
-// ice on window -> cannot open
-function cantOpen() {
-    hideAll();
-    prompt.innerHTML = 'You cannot open the window because it is too icy';
-    scene.src = 'assets/windowice.png';
-    ctn.style.left = '700px';
-    ctn.innerHTML = 'Go back';
-    ctn.onclick = function() {
-        window.location.href = 'level4.html'
-    }
-}
-
-// open window
-function canOpen() {
-    scene.src = 'assets/window.png';
-    prompt.innerHTML = 'Congrats, you found the exit!';
-    hideAll();
-    ctn.style.left = '700px'
-    ctn.innerHTML = 'Continue';
-    ctn.onclick = function() {
-        window.location.href = 'escape.html';
+        // back to home screen
+        ctn.onclick = function() { 
+            restart4()
+            b1.onclick = function() { b1clicked()}
+        }
     }
 }
 
@@ -94,8 +95,11 @@ function restart4() {
     ctn.innerHTML = 'Continue';
     b1.innerHTML = 'Open the window';
     b2.innerHTML = 'Turn on Shower';
-    showAll();
-    prompt.innerHTML = 'You wake up in a haunted house and your goal is to escape. What do you want to do?'
+    b1.style.visibility = 'visible';
+    b2.style.visibility = 'visible';
+    b3.style.visibility = 'visible';
+    ctn.style.visibility = 'hidden';
+    prompt.innerHTML = 'Almost there! You have reached the bathroom. What do you do?'
 }
 
 /* functions for changing visibility */
@@ -106,9 +110,3 @@ function hideAll() {
     ctn.style.visibility = 'visible';
 }
 
-function showAll() {
-    b1.style.visibility = 'visible';
-    b2.style.visibility = 'visible';
-    b3.style.visibility = 'visible';
-    ctn.style.visibility = 'hidden';
-}

@@ -5,14 +5,28 @@ const b2 = document.getElementById("b2");
 const b3 = document.getElementById("b3");
 const ctn = document.getElementById("ctn3");
 var hasKey = false;
+var fakeKey = false;
 
 /* OPTION 1: bathroom door */
 function b1clicked() {
-    hideAll();
-    prompt.innerHTML = 'You cannot open the door because you do not have the key';
-    // go back
-    ctn.innerHTML = 'Go Back'
-    ctn.onclick = function() { restart3() };
+    if (hasKey == false && fakeKey == false) { // no key
+        hideAll();
+        prompt.innerHTML = 'You cannot open the door because you do not have the key';
+        ctn.innerHTML = 'Go Back';
+        ctn.onclick = function() { restart3() };
+    } else if (hasKey == true) { // key
+        hideAll();
+        prompt.innerHTML = 'Congrats, you can go to the bathroom';
+        scene.src = 'assets/masterroom.png'; // change this asset
+        ctn.onclick = function() {
+            window.location.href = 'level4.html'
+        }
+    } else if (hasKey == false && fakeKey == true) { // fake key
+        hideAll();
+        prompt.innerHTML = 'You cannot open the door because the key you have is fake.';
+        ctn.innerHTML = 'Go Back';
+        ctn.onclick = function() {restart3()}
+    }
 }
 
 /* OPTION 2: desk */
@@ -20,17 +34,12 @@ function b2clicked() {
     hideAll();
     prompt.innerHTML = 'A ghost has left a message for you...';
     // look behind painting
-    ctn.innerHTML = 'Look behind <br> the painting';
     scene.src = 'assets/checkpainting.png'; 
     ctn.onclick = function() {
         scene.src = 'assets/paintingkey.png'
         prompt.innerHTML = 'You found a key!'
-        ctn.innerHTML = 'Open the door'
-        ctn.onclick = function() {
-            prompt.innerHTML = 'Oh no, the key you found was fake...'
-            ctn.innerHTML = 'Go back'
-            ctn.onclick = function() { restart3()};
-        }
+        fakeKey = true;
+        ctn.onclick = function() {restart3()}
     };
 }
 
@@ -39,12 +48,9 @@ function b3clicked() {
     hideAll();
     prompt.innerHTML = 'You found a key!';
     hasKey = true;
-    // open door
-    ctn.innerHTML = 'Open door'
-    scene.src = 'assets/pillowkey.png'; 
-    ctn.onclick = function() {
-        window.location.href = "level4.html"
-    }
+    // back to home page
+    ctn.innerHTML = 'Continue';
+    ctn.onclick = function() { restart3()   }
 }
 
 /* restart */

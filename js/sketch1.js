@@ -14,7 +14,7 @@ function b1clicked() {
         prompt.innerHTML = 'You cannot open the door because you do not have the key';
         ctn.onclick = function() { restart1()}
     } else { // key -> level 2
-        prompt.innerHTML = 'Congrats, you can now open the door';
+        prompt.innerHTML = 'Congrats, you can go to the hallway';
         scene.src = 'assets/guestdooropen.png'
         ctn.onclick = function() { // proceed to level 2
             window.location.href = 'level2.html'
