@@ -46,7 +46,9 @@ function b2clicked() {
 /* OPTION 3: pillow */
 function b3clicked() {
     hideAll();
+    scene.src = 'assets/pillowkey.png'; 
     prompt.innerHTML = 'You found a key!';
+    
     hasKey = true;
     // back to home page
     ctn.innerHTML = 'Continue';
