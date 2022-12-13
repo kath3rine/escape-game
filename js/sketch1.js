@@ -44,15 +44,19 @@ function b3clicked() {
     scene.src = 'assets/ghostunderbed.png'; 
     ctn.onclick = function() { // death page
         window.location.href = 'death.html'
-    };
+    };g
 }
 
 // restart level 1
 function restart1() {
+    if (hasKey == true) { // dresser uncovered
+        scene.src = 'assets/guestdrawer.png';
+    } else { // dresser covered
+        scene.src = 'assets/guestroom.png'; 
+    }
     ctn.innerHTML = 'Continue'
     showAll()
     prompt.innerHTML = 'You wake up in a haunted house and your goal is to escape. What do you want to do?'
-    scene.src = 'assets/guestroom.png'
 }
 
 /* functions for changing visibility */

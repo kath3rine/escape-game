@@ -17,7 +17,7 @@ function b1clicked() {
     } else if (hasKey == true) { // key
         hideAll();
         prompt.innerHTML = 'Congrats, you can go to the bathroom';
-        scene.src = 'assets/masterroom.png'; // change this asset
+        scene.src = 'assets/masterdooropen.png'; // change this asset
         ctn.onclick = function() {
             window.location.href = 'level4.html'
         }
