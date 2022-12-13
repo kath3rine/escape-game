@@ -6,7 +6,6 @@ const b3 = document.getElementById("b3");
 const ctn = document.getElementById("ctn2");
 
 /* OPTION 1: death */
-
 function db1clicked() {
     prompt.innerHTML = 'Uh oh, there is a ghost behind the door';
     prompt.style.height = '500px';
@@ -26,8 +25,6 @@ function db2clicked() {
         window.location.href = 'death.html'
     }
 }
-
-
 
 /* OPTION 3: level 3 */
 function db3clicked() {

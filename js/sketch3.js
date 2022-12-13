@@ -4,6 +4,7 @@ const b1 = document.getElementById("b1");
 const b2 = document.getElementById("b2");
 const b3 = document.getElementById("b3");
 const ctn = document.getElementById("ctn3");
+var hasKey = false;
 
 /* OPTION 1: bathroom door */
 function b1clicked() {
@@ -37,6 +38,7 @@ function b2clicked() {
 function b3clicked() {
     hideAll();
     prompt.innerHTML = 'You found a key!';
+    hasKey = true;
     // open door
     ctn.innerHTML = 'Open door'
     scene.src = 'assets/pillowkey.png'; 

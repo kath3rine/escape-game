@@ -15,7 +15,8 @@ function b1clicked() {
         ctn.onclick = function() { restart1()}
     } else { // key -> level 2
         prompt.innerHTML = 'Congrats, you can now open the door';
-        ctn.onclick = function() { 
+        scene.src = 'assets/guestdooropen.png'
+        ctn.onclick = function() { // proceed to level 2
             window.location.href = 'level2.html'
         }
     }
@@ -27,12 +28,12 @@ function b2clicked() {
     scene.src = 'assets/guestdrawer.png';
     prompt.innerHTML = 'There is a dresser under there!';
     ctn.innerHTML = 'Look inside';
-    ctn.onclick = function() {
+    ctn.onclick = function() { // look inside drawer
         scene.src = 'assets/keyindrawer.png'
         prompt.innerHTML = 'Congrats, you found the key!'
         hasKey = true;
         ctn.innerHTML = 'Continue'
-        ctn.onclick = function() { restart1() }
+        ctn.onclick = function() { restart1() } // go back to bedroom
     }
 }
 
@@ -41,11 +42,12 @@ function b3clicked() {
     hideAll();
     prompt.innerHTML = 'Uh oh, there is a ghost under the bed';
     scene.src = 'assets/ghostunderbed.png'; 
-    ctn.onclick = function() {
+    ctn.onclick = function() { // death page
         window.location.href = 'death.html'
     };
 }
 
+// restart level 1
 function restart1() {
     ctn.innerHTML = 'Continue'
     showAll()
